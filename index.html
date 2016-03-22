@@ -505,7 +505,7 @@
 		    });
 
 		    for (i = 0; i<joueurs_filter.length; i++) {
-			distances.push([i,Math.sqrt((Math.pow((age-joueurs_filter[i].age),2)/16.82296)+(Math.pow((taille-joueurs_filter[i].height),2)/41.33942)+
+			distances.push([i,Math.sqrt((Math.pow((age-joueurs_filter[i].age-2),2)/16.82296)+(Math.pow((taille-joueurs_filter[i].height),2)/41.33942)+
 			(Math.pow((vitesse-joueurs_filter[i].pace),2)/100.4818)+(Math.pow((shooting-joueurs_filter[i].shooting),2)/161.0594)+
 			(Math.pow((passe-joueurs_filter[i].passing),2)/108.0142)+(Math.pow((dribble-joueurs_filter[i].dribbling),2)/111.7447)+
 			(Math.pow((defending-joueurs_filter[i].defending),2)/171.9535)+(Math.pow((physique-joueurs_filter[i].physical),2)/101.4433))]);
