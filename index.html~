@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/styles/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Et si j'étais footballeur</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Cette page vise à créer une expérience personnalisée. Elle concerne la market-value des footballeurs" />
+	<meta name="keywords" content="football,market-value,expérience personnalisée,footballeurs,valeur footballeur" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="styles/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="styles/bootstrap.js"></script>
+	<link href="styles/Montserrat.css?family=Montserrat" rel="stylesheet">
+
+	<link href="styles/bootstrap-slider.min.css" rel="stylesheet">
+	<script src="styles/bootstrap-slider.min.js"></script>
+	
+	<link href="styles/jquery.bootstrap-touchspin.css" rel="stylesheet">
+	<script src="styles/jquery.bootstrap-touchspin.js"></script>
+	<style>
+		body {
+			font: 16px Montserrat, sans-serif;
+			line-height: 1.8;
+		}	  
+		.slider-handle.custom {
+			background: white;
+		/* You can customize the handle and set a background image */
+		}
+		.slider-handle.custom::before {
+			line-height: 26px;
+			font-size: 24px;
+			content: url("images/ball.png"); /*unicode star character*/
+			color: transparent;
+		}
+	</style>
+	<!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+</head>
+
+<body>
+
+<div class="jumbotron" id="bandeau" style="background:url('images/but.jpg') no-repeat center center; fixed-webkit-background-size: cover;  -moz-background-size: cover; -o-background-size: cover;background-size: cover; line-height: 200%;">
+	<h1><mark style="background-color: rgba(245, 245, 245, 0.4);">Et si j'étais footballeur ?</mark></h1>
+	<div class="col-xs-12" style="height:20px;"></div>
+	<h2><mark style="background-color: rgba(245, 245, 245, 0.4);">Tu en as rêvé, nous l'avons fait !</mark></h2>
+</div>
+ 
+<div class="container-fluid" style="height:100%">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Accueil</a></li>
+    <li><a data-toggle="tab" href="#menu1">Je deviens footballeur</a></li>
+    <li><a data-toggle="tab" href="#menu2">Décryptage</a></li>
+    <li><a data-toggle="tab" href="#menu3">À propos</a></li>
+  </ul>
+
+  <div class="tab-content" style="height:100%">
+    <!-- ############################################################################################
+	#############################################################################################
+	############################################################################################# -->
+
+    <div id="home" class="tab-pane fade in active">
+	<h1>Et si j'étais footballeur?</h1>
+ 	<img src="images/footballeur.jpg" class="imageGauche" alt="Photo de footballeur" />
+ 	<p>Bienvenue sur <I>"Et si j'étais footballeur?".</I> <br/><br/> 
+ BLABLA <br/>
+ Voilà </p>
+    </div>
+
+    <!-- ############################################################################################
+	#############################################################################################
+	############################################################################################# -->
+    <div id="menu1" class="tab-pane fade" style="width:100%">
+      		<h3>Quel footballeur es-tu&nbsp;?</h3>
+
+		
+		<form class="form-horizontal">
+		    <div class="well-sm" id="infosperso">
+			<legend>Informations générales</legend>
+			<div class="form-group">
+			    <label for="pseudo" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Ton pseudo</label>
+			    <div class="col-xs-10 col-sm-4 col-md-3">
+				<input type="text" class="form-control" id="pseudo" placeholder="Messi">
+			    </div>
+			</div>
+
+	 		<div class="form-group"><label for="age" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Age</label>
+				<div class="col-xs-10 col-sm-4 col-md-3 col-lg-2">
+					<input id="age" type="text" value="25" name="age" class="form-control">
+					<script>
+					   $("input[name='age']").TouchSpin({
+						min: 2,
+						max: 100,
+						step: 1,
+						decimals: 0,
+						boostat: 5,
+						maxboostedstep: 10,
+						postfix: 'ans'
+					   });
+					</script>
+				</div>
+			   </div>
+
+			<div class="form-group">
+			        <label for="taille" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Taille</label>
+			        <div class="col-xs-10 col-sm-4 col-md-3 col-lg-2">
+					<input id="taille" type="text" value="180" name="taille" class="form-control">
+					<script>
+					   $("input[name='taille']").TouchSpin({
+						min: 100,
+						max: 230,
+						step: 5,
+						decimals: 0,
+						boostat: 10,
+						maxboostedstep: 20,
+						postfix: 'cm'
+					   });
+					</script>
+				</div>
+			</div>
+		    </div>
+		    <div class="well-sm" id="infosposition">
+		    	<legend>Positionnement sur le terrain</legend>
+			<div class="form-group">
+			    <label for="pied" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Quel est ton pied fort&nbsp;?</label>
+			    <div class="radio col-xs-10 col-sm-6 col-md-6 col-lg-3">
+				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+					<label> <input type="radio" name="pied" value="pieddroit" id="pieddroit" checked/>Pied droit</label>
+				    </div>
+				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+					<label><input type="radio" name="pied" value="piedgauche" id="piedgauche" />Pied gauche</label>
+				    </div>
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="poste" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Quel poste voudrais-tu occuper&nbsp;?</label>
+			    <div class="radio col-xs-10 col-sm-6 col-md-6 col-lg-3">
+				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+					<label> <input type="radio" name="poste" value="attaquant" id="poste_att" checked />Attaquant</label>
+				    </div>
+				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+					<label><input type="radio" name="poste" value="milieu" id="poste_mil" />Milieu</label>
+				    </div>
+				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+					<label> <input type="radio" name="poste" value="defenseur" id="poste_def" />Défenseur</label>
+				    </div>
+				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+					<label><input type="radio" name="poste" value="gardien" id="poste_gar" />Gardien</label>
+				    </div>
+			    </div>
+			</div>
+		    </div>
+		    <div class="well-sm" id="infoscaractère">
+		    	<legend>Traits de caractère et style de jeu</legend>
+			<div class="row">
+				<div class="col-xs-12">
+					Les questions suivantes permettent d'imaginer quel pourrait être ton style de jeu de footballeur. Tes réponses seront prises en compte dans le calcul de ta valeur. <mark bgcolor="red"> En savoir plus sur le calcul</mark>
+				</div>
+			</div>
+			<div class="form-group">
+			    <label for="slider1" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Quand tu es en difficulté, tu préfères&nbsp;:</label>
+			    <div class="row col-xs-12 col-sm-10 col-md-8 col-lg-8">
+				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<label>t'en sortir seul</label>
+				    </div>
+				    <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3 center" style="justify-content: center">
+					<input id="slider1" type="text" 
+						data-provide="slider" 
+						data-slider-handle="custom" 
+						data-slider-min="1" 
+						data-slider-max="5" 
+						data-slider-step="1" 
+						data-slider-value="3" 
+						data-slider-tooltip="hide" />
+				    </div>
+				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<label>demander de l'aide</label>
+				    </div>
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="slider2" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Tu te définis plutôt comme&nbsp;:</label>
+			    <div class="row col-xs-12 col-sm-10 col-md-8 col-lg-8">
+				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<label>attentif aux autres</label>
+				    </div>
+				    <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3 center" style="justify-content: center">
+					<input id="slider2" type="text" 
+						data-provide="slider" 
+						data-slider-handle="custom" 
+						data-slider-min="1" 
+						data-slider-max="5" 
+						data-slider-step="1" 
+						data-slider-value="3" 
+						data-slider-tooltip="hide" />
+				    </div>
+				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<label>détaché des autres</label>
+				    </div>
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="slider2" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Dans la vie, tu préfères&nbsp;:</label>
+			    <div class="row col-xs-12 col-sm-10 col-md-8 col-lg-8">
+				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<label>défendre ce qui est important pour toi</label>
+				    </div>
+				    <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3 center" style="justify-content: center">
+					<input id="slider3" type="text" 
+						data-provide="slider" 
+						data-slider-handle="custom" 
+						data-slider-min="1" 
+						data-slider-max="5" 
+						data-slider-step="1" 
+						data-slider-value="3" 
+						data-slider-tooltip="hide" />
+				    </div>
+				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<label>te battre pour atteindre tes objectifs</label>
+				    </div>
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="slider4" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Trouves-tu qu'il est plus facile&nbsp;:</label>
+			    <div class="row col-xs-12 col-sm-10 col-md-8 col-lg-8">
+				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<label>de bien te défendre&nbsp;?</label>
+				    </div>
+				    <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3 center" style="justify-content: center">
+					<input id="slider4" type="text" 
+						data-provide="slider" 
+						data-slider-handle="custom" 
+						data-slider-min="1" 
+						data-slider-max="5" 
+						data-slider-step="1" 
+						data-slider-value="3" 
+						data-slider-tooltip="hide" />
+				    </div>
+				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<label>...&nbsp;ou de bien attaquer&nbsp;?</label>
+				    </div>
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="slider5" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Tu préfères&nbsp;:</label>
+			    <div class="row col-xs-12 col-sm-10 col-md-8 col-lg-8">
+				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<label>courir un 200 mètres le plus vite possible</label>
+				    </div>
+				    <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3 center" style="justify-content: center">
+					<input id="slider5" type="text" 
+						data-provide="slider" 
+						data-slider-handle="custom" 
+						data-slider-min="1" 
+						data-slider-max="5" 
+						data-slider-step="1" 
+						data-slider-value="3" 
+						data-slider-tooltip="hide" />
+				    </div>
+				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<label>...&nbsp;faire un jogging de 30 minutes</label>
+				    </div>
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="slider5" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Tu penses être plutôt&nbsp;:</label>
+			    <div class="row col-xs-12 col-sm-10 col-md-8 col-lg-8">
+				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<label>endurant</label>
+				    </div>
+				    <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3 center" style="justify-content: center">
+					<input id="slider5" type="text" 
+						data-provide="slider" 
+						data-slider-handle="custom" 
+						data-slider-min="1" 
+						data-slider-max="5" 
+						data-slider-step="1" 
+						data-slider-value="3" 
+						data-slider-tooltip="hide" />
+				    </div>
+				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<label>performant</label>
+				    </div>
+			    </div>
+			</div>
+			
+		    </div>
+
+		</form>
+
+
+		<p></p>
+		<b></b>
+
+		<div class="col-xs-12 align-right">
+		<button id="valider" type="button" class="btn btn-success pull-right" click="myFunction()">Je deviens footballeur !</button>
+		</div>
+		
+		<p id="demo"></p>
+
+		<script>
+		function myFunction() {
+		    $alert("hello");
+		    var x, text;
+		    // Get the value of the input field with id="numb"
+		    var age = Number(document.getElementById("age").value)
+		    if (document.getElementById("piedgauche").checked){
+			pied="Left";
+		    } else {
+			pied="Right";
+		    }
+
+		    if (document.getElementById("poste_att").checked){
+			poste="attacker";
+		    } else if (document.getElementById("poste_mil").checked) {
+			poste="midfielder";
+		    } else if (document.getElementById("poste_def").checked) {
+			poste="defender";
+		    } else if (document.getElementById("poste_gar").checked) {
+			poste="defender"; // pas de gardiens dans les centroïdes
+		    } else {
+			poste="attacker";
+		    }
+
+		    taille = Number(document.getElementById("taille").value);
+		    freq = document.getElementById("freq2").value;
+		    x = Number(document.getElementById("slider6").value);
+
+		    // If x is Not a Number or less than one or greater than 10
+		    if (isNaN(age) || x < 1 || x > 100) {
+			market_value = "Input not valid";
+		    } else {
+			market_value = freq;
+		    }
+		    
+		    
+		    
+		    var joueurscentraux, object;
+		    var joueurscentraux =[{"id":"1610802197","firstName":"Jack","lastName":"Wilshere","height":173,"birthday":"1992-01-01","age":22,"foot":"Left","type":"midfielder","pace":79,"shooting":68,"passing":83,"dribbling":85,"defending":72,"physical":63,"fifaPrice":900,"player":"Jack Wilshere","value":"17500000"},{"id":"1610777595","firstName":"Theo","lastName":"Walcott","height":175,"birthday":"1989-03-16","age":24,"foot":"Right","type":"attacker","pace":96,"shooting":72,"passing":71,"dribbling":80,"defending":46,"physical":55,"fifaPrice":763,"player":"Theo Walcott","value":"1.4e+07"},{"id":"1610666348","firstName":"Per","lastName":"Mertesacker","height":198,"birthday":"1984-09-29","age":29,"foot":"Right","type":"defender","pace":34,"shooting":41,"passing":57,"dribbling":39,"defending":84,"physical":75,"fifaPrice":1000,"player":"Per Mertesacker","value":"8400000"},{"id":"1711459309","firstName":"Eden","lastName":"Hazard","height":172,"birthday":"1991-01-07","age":23,"foot":"Right","type":"midfielder","pace":89,"shooting":82,"passing":85,"dribbling":90,"defending":49,"physical":63,"fifaPrice":216000,"player":"Eden Hazard","value":"45500000"},{"id":"1610805721","firstName":"Kevin","lastName":"De Bruyne","height":181,"birthday":"1991-06-28","age":22,"foot":"Right","type":"midfielder","pace":79,"shooting":79,"passing":80,"dribbling":82,"defending":54,"physical":55,"fifaPrice":1062.5,"player":"Kevin De Bruyne","value":"1.9e+07"},{"id":"1661136889","firstName":"Romelu","lastName":"Lukaku","height":190,"birthday":"1993-05-13","age":20,"foot":"Left","type":"attacker","pace":83,"shooting":73,"passing":65,"dribbling":73,"defending":47,"physical":77,"fifaPrice":725,"player":"Romelu Lukaku","value":"2e+07"},{"id":"1694675396","firstName":"Luis","lastName":"Suárez","height":181,"birthday":"1987-01-24","age":27,"foot":"Right","type":"attacker","pace":82,"shooting":85,"passing":76,"dribbling":91,"defending":57,"physical":75,"fifaPrice":94500,"player":"Luis Suárez","value":"3.5e+07"},{"id":"1610752456","firstName":"Vincent","lastName":"Kompany","height":192,"birthday":"1986-04-10","age":27,"foot":"Right","type":"defender","pace":73,"shooting":57,"passing":74,"dribbling":72,"defending":86,"physical":80,"fifaPrice":16500,"player":"Vincent Kompany","value":"21500000"},{"id":"1610620562","firstName":"Robin","lastName":"van Persie","height":183,"birthday":"1983-08-06","age":30,"foot":"Left","type":"attacker","pace":76,"shooting":89,"passing":82,"dribbling":84,"defending":49,"physical":69,"fifaPrice":53875,"player":"Robin van Persie","value":"3.1e+07"},{"id":"1610771362","firstName":"Mathieu","lastName":"Debuchy","height":176,"birthday":"1985-07-28","age":28,"foot":"Right","type":"defender","pace":78,"shooting":65,"passing":76,"dribbling":74,"defending":76,"physical":74,"fifaPrice":440,"player":"Mathieu Debuchy","value":"6e+06"},{"id":"1661118115","firstName":"Gareth","lastName":"Bale","height":183,"birthday":"1989-07-16","age":24,"foot":"Left","type":"attacker","pace":93,"shooting":84,"passing":82,"dribbling":84,"defending":74,"physical":74,"fifaPrice":668000,"player":"Gareth Bale","value":"49500000"},{"id":"1610621750","firstName":"Arjen","lastName":"Robben","height":180,"birthday":"1984-01-23","age":30,"foot":"Left","type":"midfielder","pace":92,"shooting":85,"passing":80,"dribbling":92,"defending":47,"physical":58,"fifaPrice":212333,"player":"Arjen Robben","value":"2.7e+07"},{"id":"1610734675","firstName":"Philipp","lastName":"Lahm","height":170,"birthday":"1983-11-11","age":30,"foot":"Right","type":"defender","pace":79,"shooting":57,"passing":84,"dribbling":81,"defending":82,"physical":66,"fifaPrice":11000,"player":"Philipp Lahm","value":"16500000"},{"id":"1610795257","firstName":"Toni","lastName":"Kroos","height":182,"birthday":"1990-01-04","age":24,"foot":"Right","type":"midfielder","pace":57,"shooting":83,"passing":85,"dribbling":83,"defending":62,"physical":56,"fifaPrice":913,"player":"Toni Kroos","value":"3.1e+07"},{"id":"1610801281","firstName":"Robert","lastName":"Lewandowski","height":184,"birthday":"1988-08-21","age":25,"foot":"Right","type":"attacker","pace":82,"shooting":78,"passing":64,"dribbling":84,"defending":52,"physical":83,"fifaPrice":18250,"player":"Robert Lewandowski","value":"6e+07"},{"id":"1610801303","firstName":"Pierre-Emerick","lastName":"Aubameyang","height":185,"birthday":"1989-06-18",
+		    	"age":24,"foot":"Right","type":"attacker","pace":95,"shooting":76,"passing":73,"dribbling":78,"defending":55,"physical":76,"fifaPrice":1200,"player":"Pierre-Emerick Aubameyang","value":"1.4e+07"},{"id":"1610801538","firstName":"Marcel","lastName":"Schmelzer","height":181,"birthday":"1988-01-22","age":26,"foot":"Left","type":"defender","pace":78,"shooting":59,"passing":72,"dribbling":70,"defending":78,"physical":72,"fifaPrice":650,"player":"Marcel Schmelzer","value":"7800000"},{"id":"1677903472","firstName":"Arturo","lastName":"Vidal","height":181,"birthday":"1987-05-22","age":26,"foot":"Right","type":"midfielder","pace":80,"shooting":79,"passing":83,"dribbling":83,"defending":83,"physical":72,"fifaPrice":2227.5,"player":"Arturo Vidal","value":"3e+07"},{"id":"1610749922","firstName":"Andrea","lastName":"Barzagli","height":186,"birthday":"1981-05-08","age":32,"foot":"Right","type":"defender","pace":69,"shooting":40,"passing":61,"dribbling":59,"defending":86,"physical":80,"fifaPrice":750,"player":"Andrea Barzagli","value":"7600000"},{"id":"1610792549","firstName":"Edinson","lastName":"Cavani","height":184,"birthday":"1987-02-14","age":27,"foot":"Right","type":"attacker","pace":83,"shooting":84,"passing":66,"dribbling":80,"defending":56,"physical":84,"fifaPrice":1450,"player":"Edinson Cavani","value":"34500000"},{"id":"1610812292","firstName":"Marco","lastName":"Verratti","height":165,"birthday":"1992-11-05","age":21,"foot":"Right","type":"midfielder","pace":68,"shooting":62,"passing":79,"dribbling":81,"defending":72,"physical":60,"fifaPrice":350,"player":"Marco Verratti","value":"1.3e+07"},{"id":"1610801565","firstName":"Nicolas","lastName":"Nkoulou","height":180,"birthday":"1990-03-27","age":23,"foot":"Right","type":"defender","pace":77,"shooting":44,"passing":72,"dribbling":68,"defending":82,"physical":76,"fifaPrice":714,"player":"Nicolas Nkoulou","value":"10500000"},{"id":"1610814598","firstName":"Marcos","lastName":"Rojo","height":186,"birthday":"1990-03-20","age":23,"foot":"Left","type":"defender","pace":72,"shooting":52,"passing":72,"dribbling":62,"defending":77,"physical":80,"fifaPrice":360,"player":"Marcos Rojo","value":"7400000"},{"id":"1610770759","firstName":"Lionel","lastName":"Messi","height":169,"birthday":"1987-06-24","age":26,"foot":"Left","type":"attacker","pace":92,"shooting":89,"passing":84,"dribbling":96,"defending":44,"physical":69,"fifaPrice":931000,"player":"Lionel Messi","value":"113500000"},{"id":"1610777889","firstName":"Karim","lastName":"Benzema","height":187,"birthday":"1987-12-19","age":26,"foot":"Right","type":"attacker","pace":84,"shooting":82,"passing":71,"dribbling":82,"defending":46,"physical":76,"fifaPrice":3825,"player":"Karim Benzema","value":"2.8e+07"},{"id":"1610824954","firstName":"Aymeric","lastName":"Laporte","height":189,"birthday":"1994-05-27","age":19,"foot":"Left","type":"defender","pace":54,"shooting":30,"passing":58,"dribbling":49,"defending":74,"physical":70,"fifaPrice":150,"player":"Aymeric Laporte","value":"4800000"},{"id":"1610822067","firstName":"Mohamed","lastName":"Salah","height":175,"birthday":"1992-06-15","age":21,"foot":"Left","type":"midfielder","pace":91,"shooting":61,"passing":67,"dribbling":82,"defending":57,"physical":56,"fifaPrice":10500,"player":"Mohamed Salah","value":"9400000"}];
+		    var distances = [];
+		    var variances={};
+		    var joueurs_filter = joueurscentraux.filter(function (val){
+			return val.foot==pied & val.type==poste;
+		    });
+
+		    for (i = 0; i<joueurs_filter.length; i++) {
+			distances.push([i,Math.sqrt(Math.pow((age-joueurs_filter[i].age),2))]);
+		    }
+		    distances.sort(function(a, b){return a[1]-b[1]});
+		    joueurplusproche = joueurs_filter[distances[0][0]].player;
+		    document.getElementById("demo").innerHTML = market_value + "<br>"+ joueurplusproche;
+		};
+		
+		$(function(){
+			$('#valider').on('click', function(e) {
+				myFunction();
+			});
+		});
+
+		</script>
+
+
+
+		
+    </div>
+
+    <!-- ############################################################################################
+	#############################################################################################
+	############################################################################################# -->
+
+    <div id="menu2" class="tab-pane fade">
+      <h3>Décryptage en statistiques</h3>
+		<h3>Statistiques concernant la base de 3000 joueurs</h3>
+		 <iframe class='highcharts-iframe' src='//cloud.highcharts.com/embed/uqasaw' style='border: 0; width: 100%; height: 500px'></iframe>
+		 
+		 <h3>Etre gaucher quand on est attaquant ou gardien fait la différence</h3>
+		 <iframe class='highcharts-iframe' src='//cloud.highcharts.com/embed/ylygox' style='border: 0; width: 100%; height: 500px'></iframe>
+		
+		<h3>Plus on devient cher, moins la rapidité importe</h3>
+		<iframe class='highcharts-iframe' src='//cloud.highcharts.com/embed/ywylyp' style='border: 0; width: 100%; height: 500px'></iframe>
+		
+		<h3>L'évolution de la valeur moyenne avec l'âge</h3>
+		<iframe class='highcharts-iframe' src='//cloud.highcharts.com/embed/obeqom' style='border: 0; width: 100%; height: 500px'></iframe>
+		
+		<h3>15 des plus grands joueurs</h3>
+		<iframe class='highcharts-iframe' src='//cloud.highcharts.com/embed/emexuk' style='border: 0; width: 100%; height: 500px'></iframe>
+
+    </div>
+    <!-- ############################################################################################
+	#############################################################################################
+	############################################################################################# -->
+
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <!-- ############################################################################################
+	#############################################################################################
+	############################################################################################# -->
+  </div>
+</div>
+
+
+
+
+
+<div id="piedDePage">
+© <I>"Et si j'étais footballeur?"<I/>
+</div>
+
+
+</body>
+
+</html>
