@@ -334,6 +334,16 @@
 		
 
 		<script>
+		function readTextFile(filepath) { 
+			var str = ""; 
+			var txtFile = new File(filepath); 
+			txtFile.open("r"); 
+			while (!txtFile.eof) { 
+			// read each line of text 
+				str += txtFile.readln() + "\n"; 
+			} 
+			return str; 
+		}
 		function myFunction() {
 		    
 		    var x, text;
@@ -506,9 +516,10 @@
 		    }
 		    distances.sort(function(a, b){return a[1]-b[1]});
 		    joueurplusproche = joueurs_filter[distances[0][0]].player;
+		    document.getElementById("demo").innerHTML = market_value + "<br>"+ joueurplusproche;
 		    
 		    var img = document.createElement("img");
-    		    img.src = "images\\"+joueurplusproche.replace(/ /g,"")+".jpg";
+    		    img.src = "images/"+joueurplusproche.replace(/ /g,"")+".jpg";
     		    img.width = 200;
     		    img.height = 300;
     		    img.align = "middle";
@@ -597,6 +608,7 @@
   		    if (joueurplusproche.replace(/ /g,"")=="MohamedSalah") {
      			document.getElementById("myDiv").innerHTML = "Mohamed Salah, né le 15 juin 1992 à Basion (dans le Gouvernorat de Gharbeya en Égypte), est un footballeur international égyptien qui évolue au poste de milieu offensif à l'AS Roma. Né dans une famille de trois enfants à Bassioun, dans le gouvernorat de Gharbeya, d'une mère au foyer et d'un père employé administratif dans un hôpital, il se découvre très vite une passion : le football. Fan de Zinédine Zidane et Ronaldo, il passe la plupart de son temps libre à jouer au football dans les rues de sa ville. À quatorze ans, il fait tous les jours un trajet de plusieurs heures en direction de la capitale égyptienne pour y suivre sa formation en club, avant de retourner sur les bancs de l'école l'après midi. Salah déclarera « Quand je rentrais le soir, je devais dormir et le lendemain je devais me réveiller rapidement », il continuera en disant que lorsque son petit frère avait voulu suivre le même chemin que lui, leur mère l'en avait empêché, ne voulant pas qu'un autre de ses fils essaie de devenir footballeur.";
  			}
+		    
 		    joueurplusproche = "Le profil de joueur qui te ressemble le plus est... <b>" + joueurplusproche + "</b>"
 		    document.getElementById("demo").innerHTML = market_value + "<br>"+ joueurplusproche;
 		};
@@ -651,6 +663,8 @@
   </div>
 </div>
 
+<div id="mydiv"class="container-fluid" style="height:100%"></div>
+<div id="myDiv" class="container-fluid" style="height:100%"></div>
 
 <div>
       <div class="container col-xs-12">
