@@ -67,7 +67,7 @@
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home">Accueil</a></li>
     <li><a data-toggle="tab" href="#menu1" id="lienMenu1">Deviens footballeur</a></li>
-    <li><a data-toggle="tab" href="#menu2">Décryptage</a></li>
+    <li><a data-toggle="tab" href="#menu2" id="lienMenu2">Décryptage</a></li>
     <li><a data-toggle="tab" href="#menu3">À propos</a></li>
   </ul>
 
@@ -75,17 +75,23 @@
     <!-- ############################################################################################
 	#############################################################################################
 	############################################################################################# -->
-    <script>
-	function auMenu1() {
-		$('#lienMenu1').trigger('click');
-	});
-    </script>
+
     <div id="home" class="tab-pane fade in active">
 	<h1>Et si j'étais footballeur?</h1>
  	<p>Ce site te propose d'explorer le monde du football à partir de la valeur des joueurs&nbsp;!</p>
-	<div class="col-xs-12" style="margin-top: 10px"><button id="AuMenu1" type="button" class="btn btn-primary pull-left tab-pane" click="auMenu1">Devenir footballeur</button></div>
-	<div class="col-xs-12" style="margin-top: 10px"><button id="AuMenu2" type="button" class="btn btn-info pull-left" click="myFunction()">Accéder au décryptage</button></div>
+	<div class="col-xs-12" style="margin-top: 10px"><button id="AuMenu1" type="button" class="btn btn-primary pull-left tab-pane">Devenir footballeur</button></div>
+	<div class="col-xs-12" style="margin-top: 10px"><button id="AuMenu2" type="button" class="btn btn-info pull-left" click="auMenu2()">Accéder au décryptage</button></div>
     </div>
+    <script>
+    $('#AuMenu1').on('click', function (e) {
+    	$('html, body').animate({ scrollTop: 0 }, 1);
+		$('#lienMenu1').trigger('click');
+	});
+    $('#AuMenu2').on('click', function (e) {
+    	$('html, body').animate({ scrollTop: 0 }, 1);
+		$('#lienMenu2').trigger('click');
+	});
+    </script>
 
     <!-- ############################################################################################
 	#############################################################################################
