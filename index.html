@@ -137,7 +137,7 @@
 					   $("input[name='taille']").TouchSpin({
 						min: 100,
 						max: 230,
-						step: 5,
+						step: 1,
 						decimals: 0,
 						boostat: 10,
 						maxboostedstep: 20,
@@ -148,7 +148,7 @@
 			</div>
 		    </div>
 		    <div class="well-sm" id="infosposition">
-		    	<legend>Positionnement sur le terrain</legend>
+		    	<legend>Sur le terrain</legend>
 			<div class="form-group">
 			    <label for="pied" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Quel est ton pied fort&nbsp;?</label>
 			    <div class="radio col-xs-10 col-sm-6 col-md-6 col-lg-3">
@@ -172,9 +172,9 @@
 				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
 					<label> <input type="radio" name="poste" value="defenseur" id="poste_def" />Défenseur</label>
 				    </div>
-				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+				  <!--  <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
 					<label><input type="radio" name="poste" value="gardien" id="poste_gar" />Gardien</label>
-				    </div>
+				    </div>  -->
 			    </div>
 			</div>
 			<div class="form-group">
@@ -478,6 +478,15 @@
 
 			market_value_finale=addSpaces(1000*Math.floor(market_value/1000));
 			//market_value_finale=pied;
+			if(freq == 1){
+				market_value_finale = market_value_finale
+			}
+			if(freq == 2){
+				market_value_finale = market_value_finale * 2
+			}
+			if(freq == 3){
+				market_value_finale = market_value_finale * 5
+			}
 		    }
 		    
 
