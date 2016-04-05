@@ -82,7 +82,7 @@
 	<h1>Et si j'étais footballeur?</h1>
  	<p>Ce site te propose d'explorer le monde du football à partir de la valeur des joueurs&nbsp;!</p>
 	<div class="col-xs-12" style="margin-top: 10px"><button id="AuMenu1" type="button" class="btn btn-primary pull-left tab-pane">Devenir footballeur</button></div>
-	<div class="col-xs-12" style="margin-top: 10px"><button id="AuMenu2" type="button" class="btn btn-info pull-left" click="auMenu2()">Accéder au décryptage</button></div>
+	<div class="col-xs-12" style="margin-top: 10px"><button id="AuMenu2" type="button" class="btn btn-info pull-left">Accéder au décryptage</button></div>
     </div>
     <script>
     $('#AuMenu1').on('click', function (e) {
@@ -196,7 +196,7 @@
 		    	<legend>Traits de caractère et style de jeu</legend>
 			<div class="row">
 				<div class="col-xs-12">
-					Les questions suivantes permettent d'imaginer quel pourrait être ton style de jeu de footballeur. Tes réponses seront prises en compte dans le calcul de ta valeur. <mark bgcolor="red"> En savoir plus sur le calcul</mark>
+					Les questions suivantes permettent d'imaginer quel pourrait être ton style de jeu de footballeur. Tes réponses seront prises en compte dans le calcul de ta valeur. <!-- <mark bgcolor="red"> En savoir plus sur le calcul</mark> -->
 				</div>
 			</div>
 			<div class="form-group">
@@ -475,18 +475,16 @@
 			if(pied=="Right"){
 			market_value=market_value+coef_pied;
 			}
+			
+			if(freq == 2){
+				market_value = market_value * 2
+			}
+			if(freq == 3){
+				market_value = market_value * 5
+			}
 
 			market_value_finale=addSpaces(1000*Math.floor(market_value/1000));
 			//market_value_finale=pied;
-			/*if(freq == 1){
-				market_value_finale = market_value_finale
-			}
-			if(freq == 2){
-				market_value_finale = market_value_finale * 2
-			}
-			if(freq == 3){
-				market_value_finale = market_value_finale * 5
-			}*/
 		    }
 		    
 
