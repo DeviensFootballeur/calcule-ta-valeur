@@ -347,8 +347,9 @@
 		
 		
 		<div id="resultats" class="collapse">
-			<div class="col-xs-12 center-block" id="demo"><br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</div>
-			<div class="col-xs-12 center-block" id="demo2"><br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</div>
+			<div class="col-xs-12" id="demo"><br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</div>
+			<!--<div class="col-xs-12 center-block" id="demo"><br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</div>
+			//<div class="col-xs-12 center-block" id="demo2"><br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</div>-->
 			<div class="col-xs-12" style="margin-top: 10px"><button class="btn btn-default" id="boutonVoirDetails" data-toggle="collapse" data-target="#biofootballeur">Afficher la bio &raquo;</button></div>
 			<div id="biofootballeur" class="collapse col-xs-8"></div>
 			<div id="mydiv" class="pull-right col-xs-4" style="height:400px"></div>
@@ -440,9 +441,12 @@
 		    slider4 = Number(document.getElementById("slider4").value);
 		    slider5 = Number(document.getElementById("slider5").value);
 		    slider6 = Number(document.getElementById("slider6").value);
-		    string1 = "<center><div class='row center-block background col-xs-4'> <div class='col-xs-12'>Merci " 
+		    /*string1 = "<center><div class='row center-block background col-xs-4'> <div class='col-xs-12'>Merci " 
 		    string2 = "&nbsp;! Ta valeur en tant que footballeur est estimée à <b>" 
-		    string3 = "&nbsp;€</b>. <br> Pour comprendre ce résultat, visite notre décryptage&nbsp;!</div></div></center>"
+		    string3 = "&nbsp;€</b>. <br> Pour comprendre ce résultat, visite notre décryptage&nbsp;!</div></div></center>"*/
+		    string1 = "Merci " 
+ 		    string2 = "&nbsp;! Ta valeur en tant que footballeur est estimée à <b>€ " 
+ 		    string3 = "</b>. Pour comprendre ce résultat, visite notre décryptage&nbsp;!"
 		    //calcul des 6 notes:
 		    vitesse=((slider5+100-slider6)/2)*0.6 + 30;
 		    shooting = ((100-slider3+slider4)/2)*0.6 + 30;
@@ -521,7 +525,7 @@
 		    }
 		    distances.sort(function(a, b){return a[1]-b[1]});
 		    joueurplusproche = joueurs_filter[distances[0][0]].player;
-		    document.getElementById("demo").innerHTML = market_value + "<br>"+ joueurplusproche;
+		    //document.getElementById("demo").innerHTML = market_value + "<br>"+ joueurplusproche;
 		    
 		    var img = document.createElement("img");
     		    img.src = "images/"+joueurplusproche.replace(/ /g,"")+".jpg";
@@ -615,10 +619,11 @@
 		    
 		    document.getElementById("biofootballeur").innerHTML = document.getElementById("biofootballeur").innerHTML + " <i>(Source&nbsp: Wikipedia)</i>"
 
-
-		    joueurplusproche = "Le profil de joueur qui te ressemble le plus est <b>" + joueurplusproche + "</b>. <br>";
-		    //document.getElementById("demo").innerHTML = market_value + "<br>";
-		    //document.getElementById("demo2").innerHTML = joueurplusproche ;
+		    joueurplusproche = "Le profil de joueur qui te ressemble le plus est <b>" + joueurplusproche + "</b>. <br>"
+ 		    document.getElementById("demo").innerHTML = market_value + "<br>"+ joueurplusproche + "<br>";
+		    /*joueurplusproche = "Le profil de joueur qui te ressemble le plus est <b>" + joueurplusproche + "</b>. <br>";
+		    document.getElementById("demo").innerHTML = market_value + "<br>";
+		    document.getElementById("demo2").innerHTML = joueurplusproche ;*/
 		    
 		    $("#resultats").collapse('show');
 			var scrollBottom = $(window).scrollTop() + $(window).height();
