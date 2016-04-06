@@ -33,9 +33,18 @@
 		.slider-handle.custom::before {
 			line-height: 26px;
 			font-size: 24px;
-			content: url("images/ball.png"); /*unicode star character*/
+			content: url("images/ball.png");
 			color: transparent;
 		}
+		.slider-track-high {
+			background: #428041;
+		}
+
+		.slider-selection {
+			background: #428041;
+		}
+
+
 		html, body {
 		  height: 100%;
 		}
@@ -55,16 +64,35 @@
 		} 
 
 		div.background {
-		  background: url("images/dollars.jpg") repeat;
-		  border: 1px solid black;
-		  opacity: 0.6;
+		  /*background: url("images/dollars.jpg") repeat;*/
+		  border: 2px solid green;
+		  /*opacity: 0.6;*/
+		 
 		}
+
+		.corps {
+		  position: relative;
+		  z-index: 5;
+		  /*height: 250px;
+		  width: 300px;*/
+		  color: #000;
+		  padding: 20px;
+		  background-image:url("images/full_stadium2.jpg") ;
+		  background-repeat: no-repeat;
+		  background-position: center center;
+		  background-attachment:fixed;
+		  overflow:scroll;
+		  fixed-webkit-background-size: cover;  
+		  -moz-background-size: cover; 
+		  -o-background-size: cover;
+		  background-size: cover;
+		}
+
 	</style>
 	<!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
 </head>
 
-<body style="background:url('images/but.jpg') no-repeat center center; fixed-webkit-background-size: cover;  -moz-background-size: cover; -o-background-size: cover;background-size: cover; line-height: 200%; ">
-
+<body class="corps">
 <div class="jumbotron" id="bandeau" style="background:url('images/but.jpg') no-repeat center center; fixed-webkit-background-size: cover;  -moz-background-size: cover; -o-background-size: cover;background-size: cover; line-height: 200%;">
 	<div class="h1"><mark style="background-color: rgba(245, 245, 245, 0.4);">Deviens footballeur</mark></div>
 	<div class="col-xs-12" style="height:20px;">&nbsp</div>
@@ -72,23 +100,30 @@
 </div>
  
 <div class="container-fluid" style="height:100%">
+  <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3"></div>
+  <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 center-block">
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home">Accueil</a></li>
     <li><a data-toggle="tab" href="#menu1" id="lienMenu1">Deviens footballeur</a></li>
     <li><a data-toggle="tab" href="#menu2" id="lienMenu2">Décryptage</a></li>
     <li><a data-toggle="tab" href="#menu3">À propos</a></li>
   </ul>
+  </div>
+  
 
-  <div class="tab-content" style="height:100%">
+  <div class="tab-content col-xs-12" style="height:100%">
     <!-- ############################################################################################
 	#############################################################################################
 	############################################################################################# -->
 
     <div id="home" class="tab-pane fade in active">
+    <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3"></div>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 center-block">
 	<h1>Et si j'étais footballeur?</h1>
  	<p>Ce site te propose d'explorer le monde du football à partir de la valeur des joueurs&nbsp;!</p>
-	<div class="col-xs-12" style="margin-top: 10px"><button id="AuMenu1" type="button" class="btn btn-primary pull-left tab-pane">Devenir footballeur</button></div>
-	<div class="col-xs-12" style="margin-top: 10px"><button id="AuMenu2" type="button" class="btn btn-info pull-left">Accéder au décryptage</button></div>
+	<div class="col-xs-12" style="margin-top: 10px"><button id="AuMenu1" type="button" class="btn btn-success center-block tab-pane">Deviens footballeur</button></div>
+	<div class="col-xs-12" style="margin-top: 10px"><button id="AuMenu2" type="button" class="btn btn-default center-block">Lis le décryptage</button></div>
+    </div>
     </div>
     <script>
     $('#AuMenu1').on('click', function (e) {
@@ -105,6 +140,8 @@
 	#############################################################################################
 	############################################################################################# -->
     <div id="menu1" class="tab-pane fade" style="width:100%">
+    <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3"></div>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 center-block">
       		<h3>Quel footballeur es-tu&nbsp;?</h3>
 
 		
@@ -112,14 +149,14 @@
 		    <div class="well-sm" id="infosperso">
 			<legend>Informations générales</legend>
 			<div class="form-group">
-			    <label for="pseudo" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Ton pseudo</label>
-			    <div class="col-xs-10 col-sm-4 col-md-3">
+			    <label for="pseudo" class="control-label col-xs-8 col-sm-4 ">Ton pseudo</label>
+			    <div class="col-xs-10 col-sm-4 ">
 				<input type="text" class="form-control" id="pseudo" placeholder="Messi">
 			    </div>
 			</div>
 
-	 		<div class="form-group"><label for="age" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Age</label>
-				<div class="col-xs-10 col-sm-4 col-md-3 col-lg-2">
+	 		<div class="form-group"><label for="age" class="control-label col-xs-8 col-sm-4 ">Age</label>
+				<div class="col-xs-10 col-sm-4 ">
 					<input id="age" type="text" value="25" name="age" class="form-control">
 					<script>
 					   $("input[name='age']").TouchSpin({
@@ -136,8 +173,8 @@
 			   </div>
 
 			<div class="form-group">
-			        <label for="taille" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Taille</label>
-			        <div class="col-xs-10 col-sm-4 col-md-3 col-lg-2">
+			        <label for="taille" class="control-label col-xs-8 col-sm-4 ">Taille</label>
+			        <div class="col-xs-10 col-sm-4">
 					<input id="taille" type="text" value="180" name="taille" class="form-control">
 					<script>
 					   $("input[name='taille']").TouchSpin({
@@ -156,26 +193,26 @@
 		    <div class="well-sm" id="infosposition">
 		    	<legend>Sur le terrain</legend>
 			<div class="form-group">
-			    <label for="pied" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Quel est ton pied fort&nbsp;?</label>
+			    <label for="pied" class="control-label col-xs-8 col-sm-4">Quel est ton pied fort&nbsp;?</label>
 			    <div class="radio col-xs-10 col-sm-6 col-md-6 col-lg-3">
-				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+				    <div class="radio col-xs-16 col-sm-16 ">
 					<label> <input type="radio" name="pied" value="pieddroit" id="pieddroit" checked/>Pied droit</label>
 				    </div>
-				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+				    <div class="radio col-xs-16 col-sm-16">
 					<label><input type="radio" name="pied" value="piedgauche" id="piedgauche" />Pied gauche</label>
 				    </div>
 			    </div>
 			</div>
 			<div class="form-group">
-			    <label for="poste" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Quel poste voudrais-tu occuper&nbsp;?</label>
-			    <div class="radio col-xs-10 col-sm-6 col-md-6 col-lg-3">
-				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+			    <label for="poste" class="control-label col-xs-8 col-sm-4">Quel poste voudrais-tu occuper&nbsp;?</label>
+			    <div class="radio col-xs-10 col-sm-6">
+				    <div class="radio col-xs-12 col-sm-12">
 					<label> <input type="radio" name="poste" value="attaquant" id="poste_att" checked />Attaquant</label>
 				    </div>
-				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+				    <div class="radio col-xs-16 col-sm-16">
 					<label><input type="radio" name="poste" value="milieu" id="poste_mil" />Milieu</label>
 				    </div>
-				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+				    <div class="radio col-xs-16 col-sm-16">
 					<label> <input type="radio" name="poste" value="defenseur" id="poste_def" />Défenseur</label>
 				    </div>
 				  <!--  <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
@@ -184,15 +221,15 @@
 			    </div>
 			</div>
 			<div class="form-group">
-			    <label for="freq" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">À quelle fréquence joues-tu au foot&nbsp;?</label>
-			    <div class="radio col-xs-10 col-sm-6 col-md-6 col-lg-3">
-				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+			    <label for="freq" class="control-label col-xs-8 col-sm-4 ">À quelle fréquence joues-tu au foot&nbsp;?</label>
+			    <div class="radio col-xs-10 col-sm-6">
+				    <div class="radio col-xs-16 col-sm-16 ">
 					<label> <input type="radio" name="freq" id="freq1" checked />Moins d'une fois par mois</label>
 				    </div>
-				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+				    <div class="radio col-xs-16 col-sm-16 ">
 					<label><input type="radio" name="freq" id="freq2" />Entre une et quatre fois par mois</label>
 				    </div>
-				    <div class="radio col-xs-16 col-sm-16 col-md-16 col-lg-16">
+				    <div class="radio col-xs-16 col-sm-16">
 					<label> <input type="radio" name="freq" id="freq3" />Au moins une fois par semaine</label>
 				    </div>
 			    </div>
@@ -201,17 +238,17 @@
 		    <div class="well-sm" id="infoscaractère">
 		    	<legend>Traits de caractère et style de jeu</legend>
 			<div class="row">
-				<div class="col-xs-12">
-					Les questions suivantes permettent d'imaginer quel pourrait être ton style de jeu de footballeur. Tes réponses seront prises en compte dans le calcul de ta valeur. <!-- <mark bgcolor="red"> En savoir plus sur le calcul</mark> -->
+				<div class="col-xs-12 col-sm-12">
+					Les questions suivantes permettent d'imaginer quel pourrait être ton style de jeu de footballeur. Tes réponses seront prises en compte dans le calcul de ta valeur.
 				</div>
 			</div>
 			<div class="form-group">
-			    <label for="slider1" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Quand tu es en difficulté, tu préfères&nbsp;:</label>
-			    <div class="row col-xs-12 col-sm-10 col-md-8 col-lg-8">
-				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			    <label for="slider1" class="control-label col-xs-8">Quand tu es en difficulté, tu préfères&nbsp;:</label>
+			    <div class="row col-xs-12 col-md-10">
+				    <div class="radio control-label col-xs-3 col-md-4">
 					<label>t'en sortir seul</label>
 				    </div>
-				    <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3 center" style="justify-content: center">
+				    <div class="col-xs-6 col-md-4" style="justify-content: center">
 					<input id="slider1" type="text" 
 						data-provide="slider" 
 						data-slider-handle="custom" 
@@ -219,20 +256,21 @@
 						data-slider-max="100" 
 						data-slider-step="10" 
 						data-slider-value="50" 
-						data-slider-tooltip="hide" />
+						data-slider-tooltip="hide"
+					/>
 				    </div>
-				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				    <div class="radio control-label col-xs-3 col-md-4">
 					<label>demander de l'aide</label>
 				    </div>
 			    </div>
 			</div>
 			<div class="form-group">
-			    <label for="slider2" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Tu te définis plutôt comme&nbsp;:</label>
-			    <div class="row col-xs-12 col-sm-10 col-md-8 col-lg-8">
-				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			    <label for="slider2" class="control-label col-xs-8">Tu te définis plutôt comme&nbsp;:</label>
+			    <div class="row col-xs-12 col-md-10">
+				    <div class="radio control-label col-xs-3 col-md-4">
 					<label>attentif aux autres</label>
 				    </div>
-				    <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3 center" style="justify-content: center">
+				    <div class="col-xs-6 col-md-4"  style="justify-content: center">
 					<input id="slider2" type="text" 
 						data-provide="slider" 
 						data-slider-handle="custom" 
@@ -242,18 +280,18 @@
 						data-slider-value="50" 
 						data-slider-tooltip="hide" />
 				    </div>
-				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				    <div class="radio control-label col-xs-3 col-md-4">
 					<label>détaché des autres</label>
 				    </div>
 			    </div>
 			</div>
 			<div class="form-group">
-			    <label for="slider2" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Dans la vie, tu préfères&nbsp;:</label>
-			    <div class="row col-xs-12 col-sm-10 col-md-8 col-lg-8">
-				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			    <label for="slider2" class="control-label col-xs-8">Dans la vie, tu préfères&nbsp;:</label>
+			    <div class="row col-xs-12 col-md-10">
+				    <div class="radio control-label col-xs-3 col-md-4">
 					<label>te battre pour atteindre tes objectifs</label>
 				    </div>
-				    <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3 center" style="justify-content: center">
+				    <div class="col-xs-6 col-md-4"  style="justify-content: center">
 					<input id="slider3" type="text" 
 						data-provide="slider" 
 						data-slider-handle="custom" 
@@ -263,18 +301,18 @@
 						data-slider-value="50" 
 						data-slider-tooltip="hide" />
 				    </div>
-				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				    <div class="radio control-label col-xs-3 col-md-4">
 					<label>défendre ce qui est important pour toi</label>
 				    </div>
 			    </div>
 			</div>
 			<div class="form-group">
-			    <label for="slider4" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Trouves-tu qu'il est plus facile&nbsp;:</label>
-			    <div class="row col-xs-12 col-sm-10 col-md-8 col-lg-8">
-				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			    <label for="slider4" class="control-label col-xs-8">Trouves-tu qu'il est plus facile&nbsp;:</label>
+			    <div class="row col-xs-12 col-md-10">
+				    <div class="radio control-label col-xs-3 col-md-4">
 					<label>de bien te défendre&nbsp;?</label>
 				    </div>
-				    <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3 center" style="justify-content: center">
+				    <div class="col-xs-6 col-md-4"  style="justify-content: center">
 					<input id="slider4" type="text" 
 						data-provide="slider" 
 						data-slider-handle="custom" 
@@ -284,18 +322,18 @@
 						data-slider-value="50" 
 						data-slider-tooltip="hide" />
 				    </div>
-				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				    <div class="radio control-label col-xs-3 col-md-4">
 					<label>...&nbsp;ou de bien attaquer&nbsp;?</label>
 				    </div>
 			    </div>
 			</div>
 			<div class="form-group">
-			    <label for="slider5" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Tu préfères&nbsp;:</label>
-			    <div class="row col-xs-12 col-sm-10 col-md-8 col-lg-8">
-				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			    <label for="slider5" class="control-label col-xs-8">Tu préfères&nbsp;:</label>
+			    <div class="row col-xs-12 col-md-10">
+				    <div class="radio control-label col-xs-3 col-md-4">
 					<label>courir un 200 mètres le plus vite possible</label>
 				    </div>
-				    <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3 center" style="justify-content: center">
+				    <div class="col-xs-6 col-md-4"  style="justify-content: center">
 					<input id="slider5" type="text" 
 						data-provide="slider" 
 						data-slider-handle="custom" 
@@ -305,18 +343,18 @@
 						data-slider-value="50" 
 						data-slider-tooltip="hide" />
 				    </div>
-				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				    <div class="radio control-label col-xs-3 col-md-4">
 					<label>...&nbsp;faire un jogging de 30 minutes</label>
 				    </div>
 			    </div>
 			</div>
 			<div class="form-group">
-			    <label for="slider6" class="control-label col-xs-8 col-sm-4 col-md-3 col-lg-3">Tu penses être plutôt&nbsp;:</label>
-			    <div class="row col-xs-12 col-sm-10 col-md-8 col-lg-8">
-				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			    <label for="slider6" class="control-label col-xs-8">Tu penses être plutôt&nbsp;:</label>
+			    <div class="row col-xs-12 col-md-10">
+				    <div class="radio control-label col-xs-3 col-md-4">
 					<label>endurant</label>
 				    </div>
-				    <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3 center" style="justify-content: center">
+				    <div class="col-xs-6 col-md-4"  style="justify-content: center">
 					<input id="slider6" type="text" 
 						data-provide="slider" 
 						data-slider-handle="custom" 
@@ -326,7 +364,7 @@
 						data-slider-value="50" 
 						data-slider-tooltip="hide" />
 				    </div>
-				    <div class="radio control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				    <div class="radio control-label col-xs-3 col-md-4">
 					<label>performant</label>
 				    </div>
 			    </div>
@@ -340,24 +378,24 @@
 		<p></p>
 		<b></b>
 
-		<div class="col-xs-12 align-right">
+		<div class="col-xs-12">
 		<button id="valider" type="button" class="btn btn-success center-block" click="myFunction()">Deviens footballeur&nbsp;!</button>
 		</div>
 		<br> <p>&nbsp;</p>
 		
 		
 		<div id="resultats" class="collapse">
-			<div class="col-xs-12 center-block" id="demo"><br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</div>
+			<div class="row col-xs-12" id="demo"><br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</div>
 			<div class="col-xs-12 center-block" id="demo2"><br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</div>
 			<div class="col-xs-12" style="margin-top: 10px"><button class="btn btn-default" id="boutonVoirDetails" data-toggle="collapse" data-target="#biofootballeur">Afficher la bio &raquo;</button></div>
 			<div id="biofootballeur" class="collapse col-xs-8"></div>
 			<div id="mydiv" class="pull-right col-xs-4" style="height:400px"></div>
 			<div class="row"><div id="cellule vide" class="pull-right xs-col-4"></div></div>
-			<div class="col-xs-12" style="margin-top: 10px"><button id="AuMenu22" type="button" class="btn btn-info center-block">Accéder au décryptage</button></div>
 			<div class="col-xs-12" style="margin-top: 10px"><br>&nbsp;</div>
 			
 			<div id="" class="container-fluid"></div>
 		</div>
+	</div>
 		<script>
 	        $('#AuMenu22').on('click', function (e) {
 	    	$('html, body').animate({ scrollTop: 0 }, 1);
@@ -440,9 +478,9 @@
 		    slider4 = Number(document.getElementById("slider4").value);
 		    slider5 = Number(document.getElementById("slider5").value);
 		    slider6 = Number(document.getElementById("slider6").value);
-		    string1 = "<center><div class='row center-block background col-xs-4'> <div class='col-xs-12'>Merci " 
-		    string2 = "&nbsp;! Ta valeur en tant que footballeur est estimée à <b>" 
-		    string3 = "&nbsp;€</b>. <br> Pour comprendre ce résultat, visite notre décryptage&nbsp;!</div></div></center>"
+		    string1 = "<center><div class='col-xs-0 col-md-2 pull-left'></div> <div class='col-xs-12 col-md-8 center-block' style='margin-top: 10px;margin-bottom: 10px; border: 2px solid green;'>Félicitations&nbsp;" 
+		    string2 = "! Ta valeur en tant que footballeur est estimée à <b>" 
+		    string3 = "&nbsp;€</b>. <br> Pour comprendre ce résultat, visite notre <br> <div class='col-xs-12 center-block' style='margin-top: 10px;margin-bottom: 10px'><button id='AuMenu22' type='button' class='btn btn-success center-block'><b>décryptage</b></button></div></div><div class='col-xs-2 pull-right'></div></center>"
 		    //calcul des 6 notes:
 		    vitesse=((slider5+100-slider6)/2)*0.6 + 30;
 		    shooting = ((100-slider3+slider4)/2)*0.6 + 30;
@@ -626,9 +664,17 @@
  // aller en bas de la page
 		};
 		
+
+
+
 		$(function(){
 			$('#valider').on('click', function(e) {
 				myFunction();
+				// activer script bouton décryptage
+				$('#AuMenu22').on('click', function (e) {
+			    	$('html, body').animate({ scrollTop: 0 }, 1);
+				$('#lienMenu2').trigger('click');
+		});
 			});
 		});
 
@@ -658,19 +704,27 @@
 	############################################################################################# -->
 
  	<div id="menu2" class="tab-pane fade">
+ 	<div class="row">
+ 	<div class="col-xs-0 col-sm-1 col-md-2 col-lg-3"></div>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 center-block">
       <h3>Décryptage en statistiques</h3>
+      <br>
+    </div>
+    <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3"></div>
+    </div>
       <center>
         <h3>À l'attaque!!!!</h3>
          <iframe class='highcharts-iframe' src='https://cloud.highcharts.com/embed/uqasaw' style='border: 0; width: 100%; height: 500px'></iframe>
         
-         <h3>Tu es gaucher? C'est un net avantage... sauf pour les milieux de terrain!</h3>
+         <h3>Tu es gaucher? C'est un net avantage... sauf pour les milieux de terrain&nbsp;!</h3>
          <iframe class='highcharts-iframe' src='https://cloud.highcharts.com/embed/ylygox' style='border: 0; width: 100%; height: 500px'></iframe>
         
-        <h3></h3>
+        <h3>Le tir, ou l'arme de la rentabilité pour les hautes valeurs</h3>
         <iframe class='highcharts-iframe' src='https://cloud.highcharts.com/embed/ywylyp' style='border: 0; width: 100%; height: 500px'></iframe>
         
-        <p> Si tu vaux 50K euros, un point supplémentaire en physique te rapportera 12 600 euros&nbsp;! </p>
-        <p> Si tu vaux 14M euros, il te rapportera 119 900 euros! </p>    
+     	 <p> Si tu vaux 3 millions d'euros, un point supplémentaire en <b>tir</b> te rapportera <b>36&nbsp;000&nbsp;€</b>... </p>
+       	 <p> ...&nbsp;mais si tu vaux 14M euros, il te rapportera <b>230&nbsp;000&nbsp;€&nbsp;</b>! </p>    
+       	
         
         <br> <br>
         <h3>Au delà de 30 ans, les footeux sont foutus&nbsp;! </h3>
@@ -680,21 +734,23 @@
         <iframe class='highcharts-iframe' src='https://cloud.highcharts.com/embed/emexuk' style='border: 0; width: 100%; height: 500px'></iframe>
      </center>
     </div>
-    
-     <div id="menu3" class="tab-pane fade">
-      
-      <h3>Qui sommes-nous (vraiment!)?</h3>
-      <p>Nous sommes quatre étudiants de l’ENSAE ParisTech, spécialisés en data-science.
-      Passionnés pour certains, intéressés pour d’autres par le milieu du football,
-      nous avons choisi de réaliser un site internet  portant sur la valeur de marché des footballeurs. </p>
-      <h3>Nos sources</h3>
-      <p>Pour réaliser ce site,
-      nous avons recueilli les caractéristiques de 3000 joueurs sélectionnés aléatoirement sur le jeu FIFA 14. Parmi ces caractéristiques figurent 6 notes, chacune sur un total de 100 points
-      visant à apprécier les aptitudes du joueur dans des compétences particulières (vitesse, physique...)</p>
-      <h3>Nous contacter</h3>
-      <p>N’hésitez-pas à nous envoyer vos impressions et commentaires à l’adresse suivante : deviensfootballeur@gmail.com</p>
     </div>
 
+    <div id="menu3" class="tab-pane fade">
+	    <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3"></div>
+	    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 center-block">
+	    <h3>Qui sommes-nous (vraiment)&nbsp;?</h3>
+	      <p>Nous sommes quatre étudiants de l’ENSAE ParisTech, spécialisés en data-science.
+	      Passionnés pour certains, intéressés pour d’autres par le milieu du football,
+	      nous avons choisi de réaliser un site internet  portant sur la valeur de marché des footballeurs. </p>
+	      <h3>Nos sources</h3>
+	      <p>Pour réaliser ce site,
+	      nous avons recueilli les caractéristiques de 3000 joueurs sélectionnés aléatoirement sur le jeu FIFA 14. Parmi ces caractéristiques figurent 6 notes, chacune sur un total de 100 points
+	      visant à apprécier les aptitudes du joueur dans des compétences particulières (vitesse, physique...)</p>
+	      <h3>Nous contacter</h3>
+	      <p>N’hésitez-pas à nous envoyer vos impressions et commentaires à l’adresse suivante : deviensfootballeur@gmail.com</p>
+	    </div>
+    </div>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
