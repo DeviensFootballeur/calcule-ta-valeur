@@ -488,7 +488,7 @@
 		    slider6 = Number(document.getElementById("slider6").value);
 		    string1 = "<center><div class='col-xs-0 col-md-2 pull-left'></div> <div class='col-xs-12 col-md-8 center-block' style='margin-top: 10px;margin-bottom: 10px; border: 2px solid green;'>Merci&nbsp;" 
 		    string2 = "! Ta valeur en tant que footballeur est estimée par notre modèle  et d'après les paramètres que tu nous a donné à <b>" 
-		    string3 = "&nbsp;€</b>. <br> Pour mieux comprendre les dépendances, n'hésite pas à visiter notre <br> <div class='col-xs-12 center-block' style='margin-top: 10px;margin-bottom: 10px'><button id='AuMenu22' type='button' class='btn btn-warning center-block'><b>décryptage</b></button></div></div><div class='col-xs-2 pull-right'></div></center>"
+		    string3 = "&nbsp;€</b>. <br> Pour mieux comprendre les dépendances entre les charactéristiques des joueurs et leur valeur, n'hésite pas à visiter notre <br> <div class='col-xs-12 center-block' style='margin-top: 10px;margin-bottom: 10px'><button id='AuMenu22' type='button' class='btn btn-warning center-block'><b>décryptage</b></button></div></div><div class='col-xs-2 pull-right'></div></center>"
 		    
 		    //calcul des 6 notes:
 		    vitesse=((slider5+100-slider6)/2)*0.6 + 30;
@@ -664,7 +664,7 @@
 
 		    
  		    document.getElementById("demo").innerHTML = market_value + "<br>"+ joueurplusproche + "<br>";
-		    joueurplusproche = "Le profil de joueur qui te ressemble le plus est <b>" + joueurplusproche + "</b>. <br>";
+		    joueurplusproche = "Le profil de joueur qui te ressemble le plus parmi la base de joueurs connu que nous avons séléctionné est<b>" + joueurplusproche + "</b>. <br>";
 		    document.getElementById("demo").innerHTML = market_value + "<br>";
 		    document.getElementById("demo2").innerHTML = joueurplusproche ;
 		    
